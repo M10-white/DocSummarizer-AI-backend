@@ -1,0 +1,6 @@
+resume.txt
+**/__pycache__
+*.pyc
+.vscode/
+venv/
+```
