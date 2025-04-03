@@ -11,3 +11,4 @@ requests
 huggingface-hub
 tqdm
 regex
+sentencepiece
