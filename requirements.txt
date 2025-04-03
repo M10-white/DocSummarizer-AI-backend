@@ -6,3 +6,8 @@ pdfplumber
 python-docx
 python-multipart
 pydantic
+langdetect
+requests
+huggingface-hub
+tqdm
+regex
