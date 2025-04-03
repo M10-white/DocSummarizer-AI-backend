@@ -17,6 +17,10 @@ app.add_middleware(
     allow_headers=["*"],
 )
 
+@app.get("/health")
+def health_check():
+    return {"status": "ok"}
+
 @app.post("/summarize")
 async def summarize(file: UploadFile = File(...)):
     contents = await file.read()
@@ -74,7 +78,3 @@ async def translate_text(data: dict):
         return {"translation": result[0]["translation_text"]}
     except Exception as e:
         return {"translation": f"[❌ Erreur de traduction : {str(e)}]"}
-
-@app.get("/health")
-def health_check():
-    return {"status": "ok"}
